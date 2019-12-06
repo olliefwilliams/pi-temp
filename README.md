@@ -1,10 +1,8 @@
 # pi-temperature-logger
-----
+
 `pi-temperature-logger` is a collection of scripts used to turn a raspberry pi into a LAN accessible temperature logger. This is a very hacked-together proof-of-concept and should not be confused with a "proper" project.
 
 ## Hardware
-
----
 
 You will need:
 
@@ -16,17 +14,15 @@ You will need:
 
 ## Set-up
 
----
-
 The following guide is for the Raspberry Pi Zero-W, but should be more or less the same for other models.
 
-#### Initial (headless) pi setup
+### Initial (headless) pi setup
 
 First write the operating system image of your choice on the micro SD card to be used with the raspberry pi.
 
 Before putting that card into the slot and booting it you will need to do 2 things:
 
-##### 1. Allow SSH Access
+#### 1. Allow SSH Access
 
 Connect the SD card to another computer, a `boot` drive should be mounted.
 
@@ -103,8 +99,6 @@ Test this by putting a php file in `/var/www/html` and using a browser on anothe
 
 ## Testing
 
----
-
 Assuming everything has installed properly, (and you haven't already tested everything as in the guides above) it's time to test everything.
 
 First, place all python files in a folder called `python` your home directory, then:
@@ -127,11 +121,9 @@ The terminal will print the temperature once a second.
 
 ## Installation
 
----
-
 Now it's time to actually "install" the code and get it working.
 
-#### HTML
+### HTML
 
 Get all the files from the `html` directory and put them in `/var/www/html`.
 
@@ -173,8 +165,6 @@ Check the path used. If you've changed the hostname of your pi, you will need to
 The line above tells the OS to run the python file once every 5 minutes, you can of course edit this to be more or less frequent.
 
 ## Finishing up
-
----
 
 Everything should now be installed and running. Even if the pi reboots, the cron task will ensure that the pi still logs the temperature.
 
