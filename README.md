@@ -28,7 +28,7 @@ You will need:
 - 8GB or larger Micro SD card burned with the OS of your choice (Raspbian recommended)
 - Adafruit MCP9808 I2C module. [Product page](https://www.adafruit.com/product/1782)
 - Wires to connect the two
-- (optional) Headers for both the pi and the module to make connecing easier
+- (optional) Headers for both the pi and the module to make connecting easier
 
 ## Set-up
 
@@ -104,7 +104,7 @@ It's probably easiest to follow their guides:
 
 To make the information accessible in-browser from any device on the same network as the pi, we're going to turn it into a webserver.
 
-All you we need to do is install Apache and PHP 7:
+All we need to do is install Apache and PHP 7:
 
 ```
 sudo apt install apache2
