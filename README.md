@@ -4,23 +4,21 @@
 
 ## Table of contents
 
-- [pi-temperature-logger](#pi-temperature-logger)
-  * [Hardware](#hardware)
-  * [Set-up](#set-up)
-    + [Initial (headless) pi setup](#initial--headless--pi-setup)
-      - [1. Allow SSH Access](#1-allow-ssh-access)
-      - [2. Configure WiFi Networks](#2-configure-wifi-networks)
-    + [Connecting](#connecting)
-    + [Updates](#updates)
-    + [Third party libraries](#third-party-libraries)
-    + [Web server](#web-server)
-  * [Testing](#testing)
-        
-  * [Installation](#installation)
-    + [HTML](#html)
-    + [Python](#python)
-    + [Cron](#cron)
-  * [Finishing up](#finishing-up)
+  - [Hardware](#hardware)
+  - [Set-up](#set-up)
+    * [Initial (headless) pi setup](#initial--headless--pi-setup)
+      + [1. Allow SSH Access](#1-allow-ssh-access)
+      + [2. Configure WiFi Networks](#2-configure-wifi-networks)
+    * [Connecting](#connecting)
+    * [Updates](#updates)
+    * [Third party libraries](#third-party-libraries)
+    * [Web server](#web-server)
+  - [Testing](#testing)        
+  - [Installation](#installation)
+    * [HTML](#html)
+    * [Python](#python)
+    * [Cron](#cron)
+  - [Finishing up](#finishing-up)
 
 ## Hardware
 
