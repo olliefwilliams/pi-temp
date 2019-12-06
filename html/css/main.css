@@ -1,0 +1,373 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/**
+ * Default styles for the dygraphs charting library.
+ */
+
+.dygraph-legend {
+  position: absolute;
+  font-size: 14px;
+  z-index: 10;
+  width: 250px;  /* labelsDivWidth */
+  /*
+  dygraphs determines these based on the presence of chart labels.
+  It might make more sense to create a wrapper div around the chart proper.
+  top: 0px;
+  right: 2px;
+  */
+  
+  line-height: normal;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* styles for a solid line in the legend */
+.dygraph-legend-line {
+  display: inline-block;
+  position: relative;
+  bottom: .5ex;
+  padding-left: 1em;
+  height: 1px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  /* border-bottom-color is set based on the series color */
+}
+
+/* styles for a dashed line in the legend, e.g. when strokePattern is set */
+.dygraph-legend-dash {
+  display: inline-block;
+  position: relative;
+  bottom: .5ex;
+  height: 1px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  /* border-bottom-color is set based on the series color */
+  /* margin-right is set based on the stroke pattern */
+  /* padding-left is set based on the stroke pattern */
+}
+
+.dygraph-roller {
+  position: absolute;
+  z-index: 10;
+}
+
+/* This class is shared by all annotations, including those with icons */
+.dygraph-annotation {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* This class only applies to annotations without icons */
+/* Old class name: .dygraphDefaultAnnotation */
+.dygraph-default-annotation {
+  border: 1px solid black;
+  
+  text-align: center;
+}
+
+.dygraph-axis-label {
+  /* position: absolute; */
+  /* font-size: 14px; */
+  z-index: 10;
+  line-height: normal;
+  overflow: hidden;
+ 
+}
+
+.dygraph-axis-label-x {
+}
+
+.dygraph-axis-label-y {
+}
+
+.dygraph-axis-label-y2 {
+}
+
+.dygraph-title {
+  font-weight: bold;
+  z-index: 10;
+  text-align: center;
+  /* font-size: based on titleHeight option */
+}
+
+.dygraph-xlabel {
+  text-align: center;
+  /* font-size: based on xLabelHeight option */
+}
+
+/* For y-axis label */
+.dygraph-label-rotate-left {
+  text-align: center;
+  /* See http://caniuse.com/#feat=transforms2d */
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+
+/* For y2-axis label */
+.dygraph-label-rotate-right {
+  text-align: center;
+  /* See http://caniuse.com/#feat=transforms2d */
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+	background-color: #050508;
+	color: #efefef;
+}
+.graph-container{
+	width:95%;
+	display: block;
+	position:relative;
+	max-width: 800px;
+	margin:20px auto;
+	max-height: 66vh;
+}
+
+.graph-container:after{
+	display: block;
+	padding-bottom: 66%;
+	content: '';
+}
+
+#graph{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+.button-container{
+	width:100%;
+	margin:0 auto;
+	max-width: 600px;
+	overflow: auto;
+	position: relative;
+	padding-left: 2.5%;
+}
+
+.button-container button{
+	width:30.83%;
+	margin:1em 2.5% 1em 0;
+	background-color: rgba(241, 84, 85, 0.4);
+	border: 1px solid rgba(241, 84, 85, 1);
+	outline:0;
+	border-radius: 5px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding:1em;
+	display: block;
+	float: left;
+}
+
+
+.button-container button:hover{
+	
+}
+
+.current-temp{
+display:block;
+color:rgba(241, 84, 85, 1);
+font-size:2em;
+text-align:center;
+padding-top:1em;
+width:100%;
+}
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,8 @@
+<Location "/raw">
+    ForceType text/plain
+</Location>
+
+SetHandler default-handler
+AddType text/plain csv html
+AddHandler text/plain .csv
+AddHandler tex/plain csv html
