@@ -33,7 +33,7 @@ touch /volumes/boot ssh
 ```
 This simply tells the Raspberry Pi operating system to allow incoming SSH connections
 
-#####2. Configure WiFi Networks
+##### 2. Configure WiFi Networks
 
 On the same `boot` partition you will need to create a file called `wpa_supplicant.conf`
 
@@ -82,7 +82,7 @@ It's probably easiest to follow their guides:
 
 [mcp9808 installation guide](https://learn.adafruit.com/adafruit-mcp9808-precision-i2c-temperature-sensor-guide/python-circuitpython)
 
-####Web server
+#### Web server
 
 To make the information accessible in-browser from any device on the same network as the pi, we're going to turn it into a webserver.
 
