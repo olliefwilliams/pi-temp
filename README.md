@@ -2,6 +2,26 @@
 
 `pi-temperature-logger` is a collection of scripts used to turn a raspberry pi into a LAN accessible temperature logger. This is a very hacked-together proof-of-concept and should not be confused with a "proper" project.
 
+## Table of contents
+
+- [pi-temperature-logger](#pi-temperature-logger)
+  * [Hardware](#hardware)
+  * [Set-up](#set-up)
+    + [Initial (headless) pi setup](#initial--headless--pi-setup)
+      - [1. Allow SSH Access](#1-allow-ssh-access)
+      - [2. Configure WiFi Networks](#2-configure-wifi-networks)
+    + [Connecting](#connecting)
+    + [Updates](#updates)
+    + [Third party libraries](#third-party-libraries)
+    + [Web server](#web-server)
+  * [Testing](#testing)
+        
+  * [Installation](#installation)
+    + [HTML](#html)
+    + [Python](#python)
+    + [Cron](#cron)
+  * [Finishing up](#finishing-up)
+
 ## Hardware
 
 You will need:
@@ -33,7 +53,7 @@ touch /volumes/boot ssh
 ```
 This simply tells the Raspberry Pi operating system to allow incoming SSH connections
 
-##### 2. Configure WiFi Networks
+#### 2. Configure WiFi Networks
 
 On the same `boot` partition you will need to create a file called `wpa_supplicant.conf`
 
@@ -43,7 +63,7 @@ touch /volumes/boot wpa_supplicant.conf
 
 The content of this file will tell the raspberry pi which network(s) to connect to. There are a number of different options to include in this file, but it is recommended that you use the one included in this repo as it can be very finicky to get working correctly.
 
-#### Connecting
+### Connecting
 
 You should now be able to connect to the pi with SSH over WiFi, but first you will have to find it! Either log in to your router, look at the connected devices or use the handy `Fing` app for android phones to scan your network for connected devices.
 
@@ -57,7 +77,7 @@ ssh pi@xxx.xxx.xx.xx
 
 The password will be `raspberry`. You should change this using the `passwd` command.
 
-#### Updates
+### Updates
 
 Run the update and upgrade commands to...update and upgrade everything:
 
@@ -70,7 +90,7 @@ sudo apt full-upgrade
 ```
 `full-upgrade` will bring in all dependencies.
 
-#### Third party libraries
+### Third party libraries
 
 The code written relies on libraries from the ever-helpful adafruit.
 
@@ -82,7 +102,7 @@ It's probably easiest to follow their guides:
 
 [mcp9808 installation guide](https://learn.adafruit.com/adafruit-mcp9808-precision-i2c-temperature-sensor-guide/python-circuitpython)
 
-#### Web server
+### Web server
 
 To make the information accessible in-browser from any device on the same network as the pi, we're going to turn it into a webserver.
 
