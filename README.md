@@ -11,6 +11,7 @@
       + [2. Configure WiFi Networks](#2-configure-wifi-networks)
     * [Connecting](#connecting)
     * [Updates](#updates)
+    * [Physically connecting the electronics](#physically-connecting-the-electronics)
     * [Third party libraries](#third-party-libraries)
     * [Web server](#web-server)
   - [Testing](#testing)        
@@ -88,7 +89,7 @@ sudo apt full-upgrade
 ```
 Using `full-upgrade` ensures that `apt` will bring in all dependencies.
 
-### Physically connect the electronics
+### Physically connecting the electronics
 
 Before we install the necessary libraries, connect the following togther either by soldering or by using headers and jumper wire:
 
