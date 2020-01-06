@@ -86,13 +86,22 @@ then:
 ```
 sudo apt full-upgrade
 ```
-`full-upgrade` will bring in all dependencies.
+Using `full-upgrade` ensures that `apt` will bring in all dependencies.
+
+### Physically connect the electronics
+
+Before we install the necessary libraries, connect the following togther either by soldering or by using headers and jumper wire:
+
+| Sensor Pin Name | Pi Pin Name | Pi Pin Number |
+|-----------------|-------------|---------------|
+|Vdd              | 3v3         | 1             |
+|Gnd              | Gnd         | 9 (or 6)      |
+|SCL              | SCL         | 5             |
+|SDA              | SDA         | 3             |
 
 ### Third party libraries
 
-The code written relies on libraries from the ever-helpful adafruit.
-
-Specifically the `circuitpython` and `circuitpython-mcp9808` libraries.
+This project relies on libraries from the ever-helpful Adafruit company — specifically the `circuitpython` and `circuitpython-mcp9808` libraries.
 
 It's probably easiest to follow their guides:
 
@@ -188,4 +197,4 @@ Everything should now be installed and running. Even if the pi reboots, the cron
 
 To view the current temperature, ensure your device is connected to the same network and simply point your browser to the pi. You will see the current temperature and a graph of previous measurements.
 
-Please be aware that if you have literally just installed everything there may be no data yet.
+Please be aware that if you have literally just installed everything there may be no data yet to display.
